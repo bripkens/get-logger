@@ -42,5 +42,8 @@
     "jest": "^19.0.2",
     "semistandard": "^11.0.0",
     "sinon": "^2.1.0"
+  },
+  "dependencies": {
+    "coveralls": "^2.13.1"
   }
 }
