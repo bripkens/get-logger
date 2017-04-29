@@ -2,8 +2,35 @@
   "name": "get-logger",
   "version": "1.0.0",
   "main": "lib/logging.js",
-  "author": "Ben Ripkens <bripkens@gmail.com> (http://bripkens.de/)",
+  "files": [
+    "lib",
+    "get-logger.d.ts"
+  ],
+  "typescript": {
+    "definition": "get-logger.d.ts"
+  },
+  "author": {
+    "name": "Ben Ripkens",
+    "email": "bripkens@gmail.com",
+    "url": "http://github.com/bripkens"
+  },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bripkens/get-logger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bripkens/formalistic/issues"
+  },
+  "keywords": [
+    "logging",
+    "facade",
+    "slf4j",
+    "slf4js",
+    "logger",
+    "bunyan",
+    "pino"
+  ],
   "scripts": {
     "test": "yarn run test:unit && yarn run test:lint",
     "test:lint": "semistandard */*.js",
