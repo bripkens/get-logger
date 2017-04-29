@@ -4,17 +4,17 @@
 
 var sinon = require('sinon');
 
-var logging = require('../lib/logging');
+var getLogger = require('../lib/logging');
 
 describe('logging', function () {
   beforeEach(function () {
-    logging.nextTestIteration();
+    getLogger.nextTestIteration();
   });
 
   describe('default logger', function () {
     ['debug', 'info', 'warn', 'error'].forEach(function (type) {
       it('must be possible to log on ' + type + ' level without any manual configuration', function () {
-        logging.getLogger('a')[type]('123');
+        getLogger('a')[type]('123');
       });
     });
   });
@@ -39,9 +39,9 @@ describe('logging', function () {
       var createdLogger;
 
       beforeEach(function () {
-        logging.setLoggerProvider(provider);
+        getLogger.setLoggerProvider(provider);
         loggerName = 'shopping';
-        createdLogger = logging.getLogger(loggerName);
+        createdLogger = getLogger(loggerName);
       });
 
       it('must create an instance', function () {
@@ -67,8 +67,8 @@ describe('logging', function () {
 
       beforeEach(function () {
         loggerName = 'shopping';
-        createdLogger = logging.getLogger(loggerName);
-        logging.setLoggerProvider(provider);
+        createdLogger = getLogger(loggerName);
+        getLogger.setLoggerProvider(provider);
       });
 
       it('must create an instance', function () {

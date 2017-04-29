@@ -1,5 +1,5 @@
 {
-  "name": "logging",
+  "name": "get-logger",
   "version": "1.0.0",
   "main": "lib/logging.js",
   "author": "Ben Ripkens <bripkens@gmail.com> (http://bripkens.de/)",
