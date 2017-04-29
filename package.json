@@ -1,0 +1,7 @@
+{
+  "name": "logging",
+  "version": "1.0.0",
+  "main": "logging.js",
+  "author": "Ben Ripkens <bripkens@gmail.com> (http://bripkens.de/)",
+  "license": "MIT"
+}
