@@ -1,7 +1,19 @@
 {
   "name": "logging",
   "version": "1.0.0",
-  "main": "logging.js",
+  "main": "lib/logging.js",
   "author": "Ben Ripkens <bripkens@gmail.com> (http://bripkens.de/)",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "yarn run test:unit && yarn run test:lint",
+    "test:lint": "semistandard */*.js",
+    "test:unit": "NODE_ENV=test jest --coverage",
+    "precommit": "yarn run test"
+  },
+  "devDependencies": {
+    "husky": "^0.13.3",
+    "jest": "^19.0.2",
+    "semistandard": "^11.0.0",
+    "sinon": "^2.1.0"
+  }
 }
